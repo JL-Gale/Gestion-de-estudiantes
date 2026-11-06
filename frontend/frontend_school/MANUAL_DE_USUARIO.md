@@ -73,12 +73,12 @@ El acceso al sistema se realiza a través de una interfaz institucional limpia y
 - **Seguridad**: Al enviar las credenciales, el backend valida el hash BCrypt y genera un token JWT con vigencia temporal.
 - **Redirección Inteligente**: El servicio de autenticación lee los *claims* del token y redirige de manera automática al panel correspondiente según el rol del usuario.
 
-![Pantalla de Inicio de Sesión](/docs/screenshots/01_login_view.png)
+![Pantalla de Inicio de Sesión](/frontend/frontend_school/docs/screenshots/01_login_view.png)
 
 ### 3.2 Recuperación de Contraseña
 Haciendo clic en el enlace *"¿Olvidaste tu contraseña?"*, se despliega una ventana modal donde el usuario introduce su correo institucional para recibir las instrucciones de restablecimiento de clave.
 
-![Modal de Recuperación de Contraseña](/docs/screenshots/02_recuperar_password_modal.png)
+![Modal de Recuperación de Contraseña](/frontend/frontend_school/docs/screenshots/02_recuperar_password_modal.png)
 
 ---
 
@@ -92,7 +92,7 @@ Presenta un resumen ejecutivo en tiempo real de la operación escolar:
 - **Estado de Matrícula**: Porcentaje de ocupación escolar y seguimiento del año lectivo vigente.
 - **Acciones Rápidas**: Enlaces directos para crear cursos, registrar docentes o asignar cargas.
 
-![Dashboard del Administrador](/docs/screenshots/03_admin_dashboard.png)
+![Dashboard del Administrador](/frontend/frontend_school/docs/screenshots/03_admin_dashboard.png)
 
 ---
 
@@ -102,9 +102,9 @@ Permite administrar la base de datos de alumnos del colegio.
 - **Alta de Nuevo Estudiante**: Modal con validaciones estrictas para tipo de documento (CC, TI, CE), número de identificación único, nombres, teléfono de contacto y correo institucional.
 - **Edición y Eliminación**: Control de edición y eliminación segura con confirmación.
 
-![Listado de Estudiantes](/docs/screenshots/04_admin_estudiantes.png)
+![Listado de Estudiantes](/frontend/frontend_school/docs/screenshots/04_admin_estudiantes.png)
 
-![Modal de Registro de Nuevo Estudiante](/docs/screenshots/05_admin_estudiantes_nuevo_modal.png)
+![Modal de Registro de Nuevo Estudiante](/frontend/frontend_school/docs/screenshots/05_admin_estudiantes_nuevo_modal.png)
 
 ---
 
@@ -113,7 +113,7 @@ Administración de la planta profesoral del colegio.
 - **Directorio de Profesores**: Visualización de especialidad académica (ej: Lenguas Extranjeras, Matemáticas, Ciencias), correo y teléfono.
 - **Protección de Integridad Referencial**: El sistema impide eliminar a un docente si este tiene materias o cargas académicas asignadas en el año lectivo en curso (`422 Unprocessable Entity`).
 
-![Gestión de Docentes](/docs/screenshots/06_admin_docentes.png)
+![Gestión de Docentes](/frontend/frontend_school/docs/screenshots/06_admin_docentes.png)
 
 ---
 
@@ -122,7 +122,7 @@ Catálogo de áreas del conocimiento impartidas en la institución.
 - **Campos**: Código interno, nombre de la asignatura, intensidad horaria semanal y descripción pedagógica.
 - **Uso en Cargas**: Estas materias son las que posteriormente se vinculan a los docentes y salones.
 
-![Catálogo de Asignaturas](/docs/screenshots/07_admin_asignaturas.png)
+![Catálogo de Asignaturas](/frontend/frontend_school/docs/screenshots/07_admin_asignaturas.png)
 
 ---
 
@@ -132,7 +132,7 @@ Gestión y organización de salones escolares por grado y grupo (ej: `11 A`, `10
 - **Bloqueo de Edición Histórica**: Los cursos de años anteriores al año actual no se pueden editar para preservar la integridad del historial académico.
 - **Buscador de Historial por Año**: Permite consultar qué salones existieron en años pasados (ej: 2024, 2025) con un solo clic.
 
-![Cursos y Salones Activos](/docs/screenshots/08_admin_cursos.png)
+![Cursos y Salones Activos](/frontend/frontend_school/docs/screenshots/08_admin_cursos.png)
 
 ---
 
@@ -146,9 +146,9 @@ Vínculo entre el Curso, la Asignatura y el Docente encargado.
   - **Fechas Opcionales**: Las fechas de inicio y fin de calificación pueden guardarse en blanco (`null`), permitiendo guardar la estructura general del año sin forzar las fechas de los periodos 2 y 3 por adelantado.
   - **Validación Cronológica**: Si se ingresan fechas, `fecha_inicio` no puede ser posterior a `fecha_fin`.
 
-![Listado de Cargas Académicas](/docs/screenshots/09_admin_cargas_academicas.png)
+![Listado de Cargas Académicas](/frontend/frontend_school/docs/screenshots/09_admin_cargas_academicas.png)
 
-![Modal de Configuración de Cortes con Fechas Opcionales y Suma 100%](/docs/screenshots/10_admin_configurar_cortes_modal.png)
+![Modal de Configuración de Cortes con Fechas Opcionales y Suma 100%](/frontend/frontend_school/docs/screenshots/10_admin_configurar_cortes_modal.png)
 
 ---
 
@@ -159,9 +159,9 @@ Organización de los estudiantes en sus salones correspondientes.
 - **Ventana Modal de Salón**: Al hacer clic en un salón (ej: `11 A`), se abre una ventana modal dedicada para gestionar las matrículas de ese salón específico.
 - **Búsqueda Dinámica**: Cuenta con un buscador predictivo que consulta el endpoint `/api/admin/estudiantes/buscar` para localizar estudiantes por nombre o documento y matricularlos en un solo clic.
 
-![Vista Principal de Matrículas por Cursos](/docs/screenshots/11_admin_matriculas.png)
+![Vista Principal de Matrículas por Cursos](/frontend/frontend_school/docs/screenshots/11_admin_matriculas.png)
 
-![Ventana Modal de Gestión y Asignación de Matrícula en Salón](/docs/screenshots/12_admin_matricular_modal.png)
+![Ventana Modal de Gestión y Asignación de Matrícula en Salón](/frontend/frontend_school/docs/screenshots/12_admin_matricular_modal.png)
 
 ---
 
@@ -174,7 +174,7 @@ El docente dispone de una interfaz optimizada para gestionar sus materias asigna
 - Cuenta con un botón *"Ver Planilla de Calificaciones"* para acceder a la gestión de notas.
 - Incluye el módulo de consulta histórica para revisar asignaciones de años anteriores.
 
-![Mis Cargas Académicas del Docente](/docs/screenshots/13_docente_mis_cargas.png)
+![Mis Cargas Académicas del Docente](/frontend/frontend_school/docs/screenshots/13_docente_mis_cargas.png)
 
 ---
 
@@ -188,7 +188,7 @@ Permite calificar a todos los estudiantes inscritos en la materia.
   - ⚪ **Sin Fechas**: El corte aún no tiene fechas definidas por el administrador; se mantiene deshabilitado.
 - **Registro de Notas (0.0 a 5.0)**: Modal interactivo para ingresar la calificación con validación de escala decimal y observaciones cualitativas.
 
-![Planilla de Calificaciones con Estados de Periodo](/docs/screenshots/14_docente_planilla_calificaciones.png)
+![Planilla de Calificaciones con Estados de Periodo](/frontend/frontend_school/docs/screenshots/14_docente_planilla_calificaciones.png)
 
 ---
 
@@ -204,7 +204,7 @@ Diseñado con un enfoque centrado en la transparencia académica, permitiendo al
 - **Diseño Horizontal Compacto**: Todas las notas se muestran en una sola fila por asignatura, agrupando en columnas los cortes evaluativos (1er Periodo, 2do Periodo, 3er Periodo), ponderaciones, notas numéricas y observaciones docentes.
 - **Consulta de Boletines Históricos**: Permite ingresar un año previo (ej: 2025) y consultar las notas definitivas de años escolares anteriores.
 
-![Boletín Consolidado de Calificaciones del Estudiante](/docs/screenshots/15_estudiante_mis_notas.png)
+![Boletín Consolidado de Calificaciones del Estudiante](/frontend/frontend_school/docs/screenshots/15_estudiante_mis_notas.png)
 
 ---
 
@@ -215,7 +215,7 @@ Muestra la ficha de matrícula oficial del estudiante para el ciclo lectivo en c
 - Año escolar vigente (2026).
 - Fecha y hora exacta en la que se formalizó la matrícula.
 
-![Ficha de Matrícula y Curso del Estudiante](/docs/screenshots/16_estudiante_mi_curso.png)
+![Ficha de Matrícula y Curso del Estudiante](/frontend/frontend_school/docs/screenshots/16_estudiante_mi_curso.png)
 
 ---
 
