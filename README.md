@@ -412,12 +412,12 @@ El acceso al sistema se realiza a través de una interfaz institucional limpia y
 - **Validaciones en tiempo real**: Comprueba el formato del correo institucional y que la contraseña no esté vacía.
 - **Seguridad y Redirección Inteligente**: Al autenticar, lee los *claims* del token JWT y dirige automáticamente al usuario a su panel específico según su rol.
 
-![Pantalla de Inicio de Sesión](/home/jl-gale/Descargas/material_colegio/doc_screenshots/01_login_view.png)
+![Pantalla de Inicio de Sesión](frontend/frontend_school/docs/screenshots/01_login_view.png)
 
 #### Modal de Recuperación de Contraseña
 Al hacer clic en *"¿Olvidaste tu contraseña?"*, se despliega una ventana modal donde el docente o estudiante verifica su identidad (`correo_institucional`, `numero_documento` y `fecha_nacimiento`) para restablecer su clave a su documento de identidad.
 
-![Modal de Recuperación de Contraseña](/home/jl-gale/Descargas/material_colegio/doc_screenshots/02_recuperar_password_modal.png)
+![Modal de Recuperación de Contraseña](frontend/frontend_school/docs/screenshots/02_recuperar_password_modal.png)
 
 ---
 
@@ -428,33 +428,33 @@ Presenta un resumen ejecutivo en tiempo real de toda la operación escolar:
 - **Tarjetas Métricas**: Total de estudiantes matriculados, docentes activos, asignaturas ofrecidas y salones configurados en el año vigente.
 - **Estado de Matrícula y Acciones Rápidas**: Accesos directos para gestionar cursos, docentes, cargas académicas y matrículas.
 
-![Dashboard del Administrador](/home/jl-gale/Descargas/material_colegio/doc_screenshots/03_admin_dashboard.png)
+![Dashboard del Administrador](frontend/frontend_school/docs/screenshots/03_admin_dashboard.png)
 
 #### Gestión de Estudiantes y Buscador Dinámico (`/admin/estudiantes`)
 Permite administrar el directorio completo de estudiantes del colegio:
 - **Filtro Instantáneo Indexado**: Busca por documento, nombres, apellidos o correo institucional sin recargar la página.
 - **Registro con Autogeneración**: El modal de nuevo estudiante solicita los datos básicos y el sistema genera automáticamente su usuario y correo institucional.
 
-![Listado de Estudiantes](/home/jl-gale/Descargas/material_colegio/doc_screenshots/04_admin_estudiantes.png)
+![Listado de Estudiantes](frontend/frontend_school/docs/screenshots/04_admin_estudiantes.png)
 
-![Modal de Registro de Nuevo Estudiante](/home/jl-gale/Descargas/material_colegio/doc_screenshots/05_admin_estudiantes_nuevo_modal.png)
+![Modal de Registro de Nuevo Estudiante](frontend/frontend_school/docs/screenshots/05_admin_estudiantes_nuevo_modal.png)
 
 #### Gestión de Docentes (`/admin/docentes`)
 Administración de la planta profesoral con protección de integridad referencial (impide eliminar docentes con cargas activas en el año lectivo).
 
-![Gestión de Docentes](/home/jl-gale/Descargas/material_colegio/doc_screenshots/06_admin_docentes.png)
+![Gestión de Docentes](frontend/frontend_school/docs/screenshots/06_admin_docentes.png)
 
 #### Catálogo de Asignaturas (`/admin/asignaturas`)
 Administración de las áreas del conocimiento impartidas en la institución que posteriormente se vinculan a los cursos y profesores.
 
-![Catálogo de Asignaturas](/home/jl-gale/Descargas/material_colegio/doc_screenshots/07_admin_asignaturas.png)
+![Catálogo de Asignaturas](frontend/frontend_school/docs/screenshots/07_admin_asignaturas.png)
 
 #### Cursos y Salones Académicos (`/admin/cursos`)
 Organización de salones escolares por grado y grupo:
 - **Diseño Minimalista**: Tarjetas limpias enfocadas en la identificación pedagógica (`11 A`, `10 A`, `1 A`) con icono institucional y botones de acción rápida.
 - **Consulta Histórica y Bloqueo de Edición**: Permite consultar qué salones existieron en años anteriores (ej. 2024, 2025) bloqueando su modificación para proteger el historial académico.
 
-![Cursos y Salones Activos](/home/jl-gale/Descargas/material_colegio/doc_screenshots/08_admin_cursos.png)
+![Cursos y Salones Activos](frontend/frontend_school/docs/screenshots/08_admin_cursos.png)
 
 #### Cargas Académicas y Configuración de Cortes Evaluativos (`/admin/cargas-academicas`)
 Vincula el Salón + Asignatura + Docente encargado y permite configurar los periodos de evaluación:
@@ -462,18 +462,18 @@ Vincula el Salón + Asignatura + Docente encargado y permite configurar los peri
 - **Plantillas Rápidas de 1 Clic**: Configuraciones instantáneas para 3 cortes (30%-30%-40%), 4 cortes (25% c/u) o 2 cortes (50%-50%).
 - **Fechas Opcionales (`null`)**: Permite definir las fechas del 1er Periodo y dejar vacías las fechas de periodos futuros hasta que la coordinación académica las programe.
 
-![Listado de Cargas Académicas](/home/jl-gale/Descargas/material_colegio/doc_screenshots/09_admin_cargas_academicas.png)
+![Listado de Cargas Académicas](frontend/frontend_school/docs/screenshots/09_admin_cargas_academicas.png)
 
-![Modal de Configuración de Cortes con Fechas Opcionales y Suma 100%](/home/jl-gale/Descargas/material_colegio/doc_screenshots/10_admin_configurar_cortes_modal.png)
+![Modal de Configuración de Cortes con Fechas Opcionales y Suma 100%](frontend/frontend_school/docs/screenshots/10_admin_configurar_cortes_modal.png)
 
 #### Gestión de Matrículas e Inscripción por Salón (`/admin/matriculas`)
 Organiza la inscripción de alumnos dentro de cada salón del año vigente:
 - **Tarjetas de Salones con Conteo de Inscritos**: Muestra cuántos alumnos tiene cada salón activo.
 - **Modal de Matrícula con Buscador Predictivo**: Al seleccionar un salón (ej. `11 A`), permite buscar alumnos por nombre o documento mediante autocompletado (`/api/admin/estudiantes/buscar`) e inscribirlos en un clic.
 
-![Vista Principal de Matrículas por Cursos](/home/jl-gale/Descargas/material_colegio/doc_screenshots/11_admin_matriculas.png)
+![Vista Principal de Matrículas por Cursos](frontend/frontend_school/docs/screenshots/11_admin_matriculas.png)
 
-![Ventana Modal de Gestión y Asignación de Matrícula en Salón](/home/jl-gale/Descargas/material_colegio/doc_screenshots/12_admin_matricular_modal.png)
+![Ventana Modal de Gestión y Asignación de Matrícula en Salón](frontend/frontend_school/docs/screenshots/12_admin_matricular_modal.png)
 
 ---
 
@@ -482,7 +482,7 @@ Organiza la inscripción de alumnos dentro de cada salón del año vigente:
 #### Mis Cargas Académicas y Consulta Histórica (`/docente/mis-cargas`)
 Muestra al profesor todas las materias y salones que tiene asignados en el año lectivo vigente (2026), además de un buscador para consultar asignaciones de años anteriores.
 
-![Mis Cargas Académicas del Docente](/home/jl-gale/Descargas/material_colegio/doc_screenshots/13_docente_mis_cargas.png)
+![Mis Cargas Académicas del Docente](frontend/frontend_school/docs/screenshots/13_docente_mis_cargas.png)
 
 #### Planilla de Calificaciones y Estados Inteligentes de Periodo (`/docente/cargas/:idCarga/calificaciones`)
 Permite calificar a los estudiantes matriculados en el salón de la carga académica seleccionada:
@@ -492,7 +492,7 @@ Permite calificar a los estudiantes matriculados en el salón de la carga acadé
   -  **Bloqueado**: La ventana de calificación ya cerró o aún no inicia; muestra las notas registradas en modo lectura.
   - **Sin Fechas**: El administrador aún no ha asignado fechas a ese corte; permanece deshabilitado.
 
-![Planilla de Calificaciones con Estados de Periodo](/home/jl-gale/Descargas/material_colegio/doc_screenshots/14_docente_planilla_calificaciones.png)
+![Planilla de Calificaciones con Estados de Periodo](frontend/frontend_school/docs/screenshots/14_docente_planilla_calificaciones.png)
 
 ---
 
@@ -504,12 +504,12 @@ Ofrece al estudiante y a sus acudientes transparencia total sobre su rendimiento
 - **Diseño Horizontal Compacto**: Cada fila representa una asignatura y muestra sus periodos evaluativos, porcentajes, notas numéricas, observaciones docentes y nota acumulada.
 - **Consulta de Boletines Históricos**: Permite consultar las calificaciones definitivas de años anteriores.
 
-![Boletín Consolidado de Calificaciones del Estudiante](/home/jl-gale/Descargas/material_colegio/doc_screenshots/15_estudiante_mis_notas.png)
+![Boletín Consolidado de Calificaciones del Estudiante](frontend/frontend_school/docs/screenshots/15_estudiante_mis_notas.png)
 
 #### Mi Salón y Curso Asignado (`/estudiante/mi-curso`)
 Presenta la ficha oficial de matrícula vigente del alumno, indicando su grado, grupo, año escolar y marca temporal exacta de inscripción.
 
-![Ficha de Matrícula y Curso del Estudiante](/home/jl-gale/Descargas/material_colegio/doc_screenshots/16_estudiante_mi_curso.png)
+![Ficha de Matrícula y Curso del Estudiante](frontend/frontend_school/docs/screenshots/16_estudiante_mi_curso.png)
 
 ---
 
